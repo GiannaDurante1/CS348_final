@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Donor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Add Donor</h2>
+    <form action="{{ url_for('add_donor') }}" method="POST">
+        <label>First Name:</label>
+        <input type="text" name="first" required><br><br>
+
+        <label>Last Name:</label>
+        <input type="text" name="last" required><br><br>
+
+        <label>country:</label>
+        <input type="text" name="country"><br><br>
+
+        <label>Phone Number:</label>
+        <input type="text" name="phone_number"><br><br>
+
+        <label>Blood Type:</label>
+        <select name="blood_type" required>
+            <option value="">Select Blood Type</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <a href="{{ url_for('index') }}">
+        <button>Back to Donors</button>
+    </a>
+</body>
+</html>

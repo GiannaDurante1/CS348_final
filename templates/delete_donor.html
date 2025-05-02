@@ -1,0 +1,22 @@
+<!-- delete_donor.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Stored Procedure</title>
+</head>
+<body>
+    <h2>Test Stored Procedure: Delete Donor</h2>
+
+    <form action="{{ url_for('delete_donor_page') }}" method="POST">
+        <label for="donor_id">Enter Donor ID to Test Deletion:</label>
+        <input type="number" id="donor_id" name="donor_id" required>
+        <button type="submit"> Delete</button>
+    </form>
+
+    <br>
+    <a href="{{ url_for('index') }}">Back to Donor Table</a>
+
+</body>
+</html>
